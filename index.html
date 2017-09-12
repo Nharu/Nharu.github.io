@@ -21,22 +21,22 @@
 				<h2>개인 정보</h2>
 			</p>
 			<label for="name" style="width: 60px; display: inline-block;">이름</label>
-			<input type="text" name="name" id="name"><br />
-			<label for="password" style="width: 60px; display:inline-block;"">비밀번호</label>
-			<input type="password" name="password" id="password">&nbsp;(수정시 필요)<br />
+			<input type="text" name="name" id="name" required><br />
+			<label for="password" style="width: 60px; display:inline-block;">비밀번호</label>
+			<input type="password" name="password" id="password" required>&nbsp;(수정시 필요)<br />
 
 			<p>
 				<h2>참가 정보</h2>
 			</p>
 			<fieldset>
 				<legend>참가 유형 선택</legend>
-				<input type="radio" name="type" value="free">무료(교내참가자)
+				<input type="radio" name="type" value="free" required>무료(교내참가자)
 				<input type="radio" name="type" value="nonfree">유료(교외참가자)
 			</fieldset>
 			<br />
 			<fieldset>
 				<legend>관심 분야 선택</legend>
-				<input type="radio" name="field" value="html">HTML5 시맨틱
+				<input type="radio" name="field" value="html" required>HTML5 시맨틱
 				<input type="radio" name="field" value="css">CSS3
 				<input type="radio" name="field" value="web_storage">Web Storage
 				<input type="radio" name="field" value="web_socket">Web Socket
@@ -48,8 +48,8 @@
 				<h2>선택 사항</h2>
 			</p>
 			<label for="job" style="width: 60px; display: inline-block;">직업</label>
-			<select name="job">
-				<option disabled>가까운 분야 선택</option>
+			<select name="job" required>
+				<option disabled selected value="">가까운 분야 선택</option>
 				<option value="student">학생</option>
 				<option value="web_develop">웹개발</option>
 				<option value="web_design">웹디자인</option>
