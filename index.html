@@ -1,70 +1,18 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>weekly #2</title>
-	</head>
 
-	<body>
-		<div style="border: 1px solid black; padding: 0 15 15 15;">
-			<p>
-				<h2>세미나 정보</h2>
-			</p>
-			1. 주제 : 차세대 웹 표준 기술 HTML<br />
-			2. 일정 : 5월 12일 14:00 ~ 17:00<br />
-			3. 장소 : 공학관 2층 세미나실<br />
-			4. 인원 : 선착순 100명<br />
-			5. 비용 : 본교 학생 무료 (외부 참가자 5,000원)<br />
-			6. 참가신청 : 아래 양식에 빠짐없이 기입하여 접수해 주세요<br />
-		</div>
+<head>
+	<title>Web Programming</title>
+	<link type="text/css" rel="stylesheet" href="style.css">
+</head>
 
-		<form action="" method="post" onsubmit="alert(name.value + '님 성공적으로 접수되었습니다.');">
-			<p>
-				<h2>개인 정보</h2>
-			</p>
-			<label for="name" style="width: 60px; display: inline-block;">이름</label>
-			<input type="text" name="name" id="name" required><br />
-			<label for="password" style="width: 60px; display:inline-block;">비밀번호</label>
-			<input type="password" name="password" id="password" required>&nbsp;(수정시 필요)<br />
+<body>
+	<h1>CSS 텍스트 정렬 예제</h1>
+	<p class="date">2013년 9월 1일</p>
+	<p class="poet">
+		삶이 그대를 속일지라도 슬퍼하거나 노여워하지 말라 우울한 날을 견디면 믿으라, 기쁨의 날이 오리니 마음은 미래에 사는 것, 현재는 슬픈 것, 모든 것은 순간적인 것, 지나가는 것이니 그리고 지나가는 것은 훗날 소중하게 되리니
+	</p>
+	<p><em>참고 푸시킨의 시</em></p>
+</body>
 
-			<p>
-				<h2>참가 정보</h2>
-			</p>
-			<fieldset>
-				<legend>참가 유형 선택</legend>
-				<input type="radio" name="type" value="free" required>무료(교내참가자)
-				<input type="radio" name="type" value="nonfree">유료(교외참가자)
-			</fieldset>
-			<br />
-			<fieldset>
-				<legend>관심 분야 선택</legend>
-				<input type="radio" name="field" value="html" required>HTML5 시맨틱
-				<input type="radio" name="field" value="css">CSS3
-				<input type="radio" name="field" value="web_storage">Web Storage
-				<input type="radio" name="field" value="web_socket">Web Socket
-				<input type="radio" name="field" value="canvas">Canvas
-				<input type="radio" name="field" value="geolocation">Geolocation
-			</fieldset>
-
-			<p>
-				<h2>선택 사항</h2>
-			</p>
-			<label for="job" style="width: 60px; display: inline-block;">직업</label>
-			<select name="job" required>
-				<option disabled selected value="">가까운 분야 선택</option>
-				<option value="student">학생</option>
-				<option value="web_develop">웹개발</option>
-				<option value="web_design">웹디자인</option>
-				<option value="education">교육관련</option>
-				<option value="etc">기타</option>
-			</select>
-			<br />
-			<label for="comment" style="width: 60px; display: inline-block;">남길 말씀</label>
-			<textarea rows="8" cols="80"></textarea>
-
-			<hr />
-
-			<input type="submit" value="접수하기" />
-			&nbsp;
-			<input type="reset" value="다시쓰기" />
-		</form>
-	</body>
 </html>
