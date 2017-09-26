@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>weekly#4#3</title>
+	<style>
+		@-webkit-keyframes bounce {
+			from, to {
+				bottom: 0px;
+				left: 0px;
+				-webkit-animation-timing-function: ease-out;
+			}
+			12.5% {
+				left: 150px;
+				bottom: 200px;
+				-webkit-animation-timing-function: ease-in;
+			}
+			25% {
+				left: 300px;
+				bottom: 0px;
+				-webkit-animation-timing-function: ease-out;
+			}
+			37.5% {
+				left: 450px;
+				bottom: 200px;
+				-webkit-animation-timing-function: ease-in;
+			}
+			50% {
+				left: 600px;
+				bottom: 0px;
+				-webkit-animation-timing-function: ease-out;
+			}
+			62.5% {
+				left: 450px;
+				bottom: 200px;
+				-webkit-animation-timing-function: ease-in;
+			}
+			75% {
+				left: 300px;
+				bottom: 0px;
+				-webkit-animation-timing-function: ease-out;
+			}
+			87.5% {
+				left: 150px;
+				bottom: 200px;
+				-webkit-animation-timing-function: ease-in;
+			}
+		}
+		#ball {
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			background: red;
+			border-radius: 10px;
+			-webkit-animation-name: bounce;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-duration: 5s;
+		}
+	</style>
+</head>
+<body>
+	<div id=ball></div>
+</body>
+</html>

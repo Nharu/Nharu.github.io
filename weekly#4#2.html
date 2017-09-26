@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>weekly#4#2</title>
+	<style>
+		#circle {
+			width: 200px;
+			height: 200px;
+			float: right;
+			border: 3px solid black;
+			margin: 30px 30px 30px 30px;
+			animation: 4s shape1;
+			animation-iteration-count: infinite;
+			position: absolute;
+		}
+		@keyframes shape1 {
+			0% {
+				background: red;
+				border-radius: 100px;
+				left: 0%;
+			}
+			25% {
+				background: green;
+				border-radius: 30px;
+				left: 40%;
+			}
+			50% {
+				background: yellow;
+				border-radius: 100px;
+				left: 80%;
+			}
+			75% {
+				background: green;
+				border-radius: 30px;
+				left: 50%;
+			}
+			100% {
+				background: red;
+				border-radius: 100px;
+				left: 0%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="circle"></div>
+</body>
+</html>
