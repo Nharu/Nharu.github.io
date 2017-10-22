@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>맞춤형 장학 정보 제공 서비스</title>
+	<link rel="shortcut icon" href="./favicon.ico">
+	<style>
+	body {
+		margin: 0;
+		padding: 5% 5% 5% 5%;
+		font-size: 20px;
+	}
+	body div {
+		margin: 10px 0px 10px 0px;
+	}
+	.bold {
+		font-weight: bold;
+	}
+	.standard button {
+		cursor: pointer;
+		font-size: 20px;
+		background-color: transparent;
+		border: none;
+	}
+	.standard ul {
+		list-style-type: none;
+		margin: 0px 5px 0px 5px;
+		padding: 20px 50px 20px 50px;
+		background-color: rgb(217,217,217);
+		overflow: auto;
+		line-height: 2.5em;
+	}
+	.standard ul li{
+		float: left;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.standard ul div {
+		display: none;
+		position: absolute;
+		margin-top: 0px;
+		background-color: white;
+		border: 2px solid black;
+		border-radius: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.standard ul li:hover div{
+		display: block;
+	}
+	.information form {
+		margin: 20px 40px 20px 40px;
+	}
+	.information input {
+		vertical-align: top;
+		font-size: 13px;
+	}
+	.information .grade input {
+		width: 4em;
+	}
+	.information .suhak input {
+		width: 4em;
+	}
+	.information .disable .text {
+		width: 3em;
+	}
+	#find {
+		margin: 10px auto 10px auto;
+		border: 1px solid transparent;
+		border-radius: 10px;
+		padding: 1em 1.3em 1em 1.3em;
+		background-color: rgb(148,206,88);
+		display: inline-block;
+		color: black;
+		text-decoration: none;
+		font-size: 20px;
+		cursor: pointer;
+	}
+	#mask {  
+		position:absolute;  
+		left:0;
+		top:0;
+		z-index:9000;  
+		background-color:#999999;  
+		display:none;  
+		opacity: 0.5;
+	}
+	#load {
+		display: none;
+		position: absolute;
+		z-index: 10000;
+	}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="title">
+		<div class="bold">맞춤형 장학 정보</div>
+		<div> 개인에게 맞는 장학 유형 및 장학금 정보 검색</div>
+	</div>
+	<br>
+	<div class="standard">
+		<div>[선발기준]</div>
+		<ul>
+			<li>
+				<button>학과</button>
+				<div>재학중인 학과를 입력해주세요.</div>
+			</li>
+			<li>
+				<button>수능성적</button>
+				<div>수능성적을 표준점수로 입력해주세요.</div>
+			</li>
+			<li>
+				<button>장애 여부</button>
+				<div>장애 여부를 선택해주세요.</div>
+			</li>
+			<li>
+				<button>경시대회</button>
+				<div>경시대회 입상 경력을 입력해주세요.</div>
+			</li>
+			<li>
+				<button>기초수급자</button>
+				<div>기초수급자 여부를 선택해주세요.</div>
+			</li>
+			<li>
+				<button>국가유공자</button>
+				<div>본인 혹은 부모님의 국가유공자 여부를 선택해주세요.</div>
+			</li>
+			<li>
+				<button>공모전</button>
+				<div>공로전 수상 실적을 입력해주세요.</div>
+			</li>
+			<li>
+				<button>학과</button>
+				<div>재학중인 학과를 입력해주세요.</div>
+			</li>
+			<li>
+				<button>수능성적</button>
+				<div>수능성적을 표준점수로 입력해주세요.</div>
+			</li>
+			<li>
+				<button>장애 여부</button>
+				<div>장애 여부를 선택해주세요.</div>
+			</li>
+			<li>
+				<button>경시대회</button>
+				<div>경시대회 입상 경력을 입력해주세요.</div>
+			</li>
+			<li>
+				<button>기초수급자</button>
+				<div>기초수급자 여부를 선택해주세요.</div>
+			</li>
+			<li>
+				<button>국가유공자</button>
+				<div>본인 혹은 부모님의 국가유공자 여부를 선택해주세요.</div>
+			</li>
+			<li>
+				<button>공모전</button>
+				<div>공로전 수상 실적을 입력해주세요.</div>
+			</li>
+			<li>
+				<button>학과</button>
+				<div>재학중인 학과를 입력해주세요.</div>
+			</li>
+			<li>
+				<button>수능성적</button>
+				<div>수능성적을 표준점수로 입력해주세요.</div>
+			</li>
+			<li>
+				<button>장애 여부</button>
+				<div>장애 여부를 선택해주세요.</div>
+			</li>
+			<li>
+				<button>경시대회</button>
+				<div>경시대회 입상 경력을 입력해주세요.</div>
+			</li>
+			<li>
+				<button>기초수급자</button>
+				<div>기초수급자 여부를 선택해주세요.</div>
+			</li>
+			<li>
+				<button>국가유공자</button>
+				<div>본인 혹은 부모님의 국가유공자 여부를 선택해주세요.</div>
+			</li>
+			<li>
+				<button>공모전</button>
+				<div>공로전 수상 실적을 입력해주세요.</div>
+			</li>
+			<li>
+				<button>학과</button>
+				<div>재학중인 학과를 입력해주세요.</div>
+			</li>
+			<li>
+				<button>수능성적</button>
+				<div>수능성적을 표준점수로 입력해주세요.</div>
+			</li>
+			<li>
+				<button>장애 여부</button>
+				<div>장애 여부를 선택해주세요.</div>
+			</li>
+			<li>
+				<button>경시대회</button>
+				<div>경시대회 입상 경력을 입력해주세요.</div>
+			</li>
+			<li>
+				<button>기초수급자</button>
+				<div>기초수급자 여부를 선택해주세요.</div>
+			</li>
+			<li>
+				<button>국가유공자</button>
+				<div>본인 혹은 부모님의 국가유공자 여부를 선택해주세요.</div>
+			</li>
+			<li>
+				<button>공모전</button>
+				<div>공로전 수상 실적을 입력해주세요.</div>
+			</li>
+			<li>
+				<button>학과</button>
+				<div>재학중인 학과를 입력해주세요.</div>
+			</li>
+			<li>
+				<button>수능성적</button>
+				<div>수능성적을 표준점수로 입력해주세요.</div>
+			</li>
+			<li>
+				<button>장애 여부</button>
+				<div>장애 여부를 선택해주세요.</div>
+			</li>
+			<li>
+				<button>경시대회</button>
+				<div>경시대회 입상 경력을 입력해주세요.</div>
+			</li>
+			<li>
+				<button>기초수급자</button>
+				<div>기초수급자 여부를 선택해주세요.</div>
+			</li>
+			<li>
+				<button>국가유공자</button>
+				<div>본인 혹은 부모님의 국가유공자 여부를 선택해주세요.</div>
+			</li>
+			<li>
+				<button>공모전</button>
+				<div>공로전 수상 실적을 입력해주세요.</div>
+			</li>
+		</ul>
+	</div>
+
+	<br>
+
+	<div class="information">
+		<div>[정보입력]</div>
+		<form>
+			<div class="grade">
+				성적: 
+				<input type="text">
+				/4.5
+			</div>
+			<div class="gicho">
+				기초수급자 여부: 
+				<input type="radio" name="gicho">해당
+				<input type="radio" name="gicho">해당되지 않음
+				<input type="radio" name="gicho">잘 모름
+			</div>
+			<div class="jikwon">
+				교직원 자녀 여부:
+				<input type="radio" name="jikwon">해당
+				<input type="radio" name="jikwon">해당되지 않음
+				<input type="radio" name="jikwon">잘 모름
+			</div>
+			<div class="department">
+				학과: 
+				<input type="text">
+			</div>
+			<div class="suhak">
+				수능 성적(표준점수): 
+				<input type="text">
+			</div>
+			<div class="disable">
+				장애인 여부: 
+				<input type="radio" name="disable">해당되지 않음
+				<input type="radio" name="disable">잘 모름
+				<input type="radio" name="disable">해당
+				<input type="text" class="text">
+				급
+			</div>
+
+			<div id="find">검색</div>
+		</form>
+
+		<div id="mask"> </div>
+		<image id="load" src="loading.gif">
+<script>
+	$("#find").click(function() {
+		var maskHeight = $(document).height();  
+        var maskWidth = $(window).width(); 
+        $('#mask').css({'width':maskWidth,'height':maskHeight});
+        $('#mask').fadeIn(1000);
+        $('#load').css("top", ( jQuery(window).height() - $('#load').height() ) / 2+jQuery(window).scrollTop() + "px");
+    	$('#load').css("left", ( jQuery(window).width() - $('#load').width() ) / 2+jQuery(window).scrollLeft() + "px");
+    	$('#load').css("display", "block");
+    	setTimeout(function() {
+    		window.location.replace("./find.html");
+    	}, 1500);
+	});
+</script>
+		
+</body>
+</html>
+
+
+
+
+
+
+
+
+
